@@ -1,21 +1,15 @@
 'use strict'
 
-// 관광명소 슬라이드
-const tourWrapper=document.querySelector('.new__wrapper');
-const tourSlides=document.querySelectorAll('.new__slides');
-const tourSlidez=document.querySelector('.new__slides');
-const tourSlide=document.querySelector('.new__slide');
-const tourtotal=tourSlides.length;
+// navbar 투명도 변경
+const navbar=document.querySelector('#navbar');
+const navheight=navbar.getBoundingClientRect().height;
 
-let tourWidth=tourSlidez.clientWidth;
-// let mainWidth=mainWrapper.clientWidth;
-let tourSlideIndex=0;
+window.addEventListener('scroll', () =>{
+    const scrolling=window.pageYOffset;
 
-
-function slidePosition(){
-    for(let i=0; i<tourSlides.length; i++){
-        tourSlides[i].style.left = `${tourWidth * i}px`;
+    if(scrolling > navheight){
+        navbar.classList.add('navbar__white');
+    }else{
+        navbar.classList.remove('navbar__white');
     }
-}
-
-slidePosition();
+});
