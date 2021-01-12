@@ -154,7 +154,8 @@ button{
 .main__txtbox{
     position: absolute;
     z-index: 1;
-    padding: 300px 200px;
+    top: 30%;
+    left: 10%;
     text-align: left;
     color: var(--color-white);
 }
@@ -311,6 +312,7 @@ section{
 }
 
 .product__img img{
+    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 300ms ease-in-out;
@@ -402,6 +404,7 @@ section{
 
 .footer__top .footer__menu{
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
 }
 
@@ -434,4 +437,112 @@ section{
 .footer__sns li{
     margin-right: var(--spacing-small);
     font-size: var(--font-small);
+}
+
+/* 반응형 */
+@media screen and (max-width: 760px){
+    :root{
+        --font-small: 15px;
+        --font-reguler: 20px;
+        --font-large: 30px;
+
+        --spacing-small: 10px;
+        --spacing-medium: 35px;
+        --spacing-reguler: 50px;
+    }
+
+    /* navbar */
+    .navbar__toggle-btn{
+        display: block;
+        right: 16px;
+        top: 18px;
+        font-size: var(--font-medium);
+        color: var(--color-dark-grey);
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-white);
+        padding: 12px 16px;
+    }
+
+    .navbar__logo a, .navbar__menu a{
+        color: var(--color-dark-grey);
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+        padding: 0;
+    }
+
+    .navbar__menu.active{
+        display: block;
+    }
+
+    /* new */
+
+    /* best */
+    .best-product{
+        width: 49%;
+        height: 35vh;
+    }
+
+    .best__button{
+        padding: 8px 20px;
+    }
+
+    /* about */
+    #about{
+        height: 30vh;
+    }
+
+    .about__container{
+        width: 100%;
+        padding: var(--spacing-medium);
+    }
+
+    /* service */
+    .service__container{
+        flex-direction: column;
+    }
+
+    .service__box{
+        padding-bottom: var(--spacing-small);
+    }
+
+    /* footer */
+    .footer{
+        text-align: center;
+    }
+
+    .footer__top .footer__menu{
+        justify-content: center;
+    }
+
+    .footer__bottom{
+        flex-direction: column;
+    }
+
+    .footer__desc .law{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer__desc .law li{
+        padding-right: var(--spacing-small);
+    }
+
+    .footer__sns{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .footer__sns li{
+        margin-right: var(--spacing-small);
+        font-size: var(--font-small);
+    }
 }
