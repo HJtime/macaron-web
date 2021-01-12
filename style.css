@@ -211,7 +211,7 @@ section{
 
 .new__wrapper{
     margin-top: var(--spacing-medium);
-    width: 100%;
+    width: 93%;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
@@ -222,7 +222,6 @@ section{
     height: 45vh;
     position: relative;
     display: flex;
-    /* justify-content: space-around; */
     transition: all 500ms ease-in-out;
 }
 
@@ -265,21 +264,17 @@ section{
     position: absolute;
     top: 50%;
     z-index: 1;
-    opacity: 0.8;
+    opacity: 1;
     color: var(--color-white);
-    font-size: var(--font-reguler);
+    font-size: var(--font-large);
 }
 
 .new__controls .prev{
-    left: 20%;
+    left: 5%;
 }
 
 .new__controls .next{
-    right: 20%;
-}
-
-.new__controls button:hover{
-    opacity: 1;
+    right: 5%;
 }
 
 /* best macaron */
