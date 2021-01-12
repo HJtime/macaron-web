@@ -222,7 +222,7 @@ section{
     height: 45vh;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     transition: all 500ms ease-in-out;
 }
 
@@ -231,6 +231,10 @@ section{
     height: 100%;
     overflow: hidden;
     position: absolute;
+}
+
+.new-product{
+    margin-right: var(--spacing-small);
 }
 
 .new__slides .new-product img{
@@ -243,7 +247,7 @@ section{
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 60%;
+    top: 55%;
     padding: var(--spacing-medium);
     color: var(--color-white);
 }
@@ -264,7 +268,6 @@ section{
     opacity: 0.8;
     color: var(--color-white);
     font-size: var(--font-reguler);
-    transition: transform 100ms ease-in-out;
 }
 
 .new__controls .prev{
@@ -276,7 +279,7 @@ section{
 }
 
 .new__controls button:hover{
-    transform: scale(1.2);
+    opacity: 1;
 }
 
 /* best macaron */
